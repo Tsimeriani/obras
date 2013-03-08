@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="span9">
+    <%= image_tag(@obra.picture_url, :width => "100%") if @obra.picture.present? %>
+    
+
+    <h3>Commentários</h3>
+<% @obra.comments.each do |comment| %>
+  <div>
+    <strong><%= comment.user_name %></strong>
+    <br />
+    <p><%= comment.body %><p>
+  </div>
+<% end %>
+<%= render 'comments/form' %>
+  </div>
+
+  <div class="span3">
+    <p><b>Modelo: </b><%= @obra.modelo %></p>
+    <p><b>Material: </b><%= @obra.material %></p>
+    <p><b>Valor: </b><%= @obra.valor %></p>
+    <p>
+      <%= link_to 'Editar', edit_obra_path(@idea) %> |
+      <%= link_to 'Apagar', @obra, confirm: 'Are you sure?', method: :delete %> |
+      <%= link_to 'Voltar', obras_path %>
+    </p>
+  </div>
+</div>
+

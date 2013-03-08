@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Escultura</title>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" />
+
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="topbar">
+  <div class="fill">
+
+    <div class="container">
+      <a class="brand" href="/">Lucas Rodrigues</a>
+      <ul class="nav">
+        <li class="active"><a href="/obras">Esculturas</a></li>
+        <li ><%= link_to 'Nova Obra', new_obra_path %></li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<footer>
+  <div class="container">
+    <address>
+    <strong>Lucas Esculturas</strong><br>
+    Brasil<br>
+    Maceió-AL 57036770<br>
+    <abbr title="Telefone para contato">Tel:</abbr> (82) 32353737
+    </address>
+     
+    <address>
+    <strong>Lucas Rodrigues</strong><br>
+    <a href="mailto:#">diving_lucas@hotmail.com</a>
+    </address>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<h1>Produtos</h1>
+
+
+
+<% @obras.each do |obra| %>
+  <div class="row">
+  <div class="span4">
+    <%= image_tag obra.picture_url, :width => '90%' if obra.picture.present? %>
+
+    <h4><%= link_to obra.modelo, obra %></h4>
+    
+
+    </div>
+
+
+<% end %>
+
+<br />
+
+
+    
