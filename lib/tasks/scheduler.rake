@@ -1,10 +1,7 @@
-
-desc "This task is called by the Heroku scheduler add-on"
+desc "This task is called by the Heroku cron add-on"
 task :call_page => :environment do
-	require 'net/http'
-	#call task
 
-   uri = URI.parse('http://lucas-esculturas.herokuapp.com/obras')
+   uri = URI.parse('http://www.myapp.org/')
    Net::HTTP.get(uri)
  end
  puts "it worked"
