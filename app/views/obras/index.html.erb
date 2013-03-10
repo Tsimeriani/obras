@@ -3,7 +3,7 @@
 
 
 <% @obras.each do |obra| %>
-  <div class="row">
+  <div class="row-fluid">
   <div class="span4">
     <%= image_tag obra.picture_url, :width => '90%' if obra.picture.present? %>
 
@@ -11,7 +11,7 @@
     
 
     </div>
-
+</div>
 
 <% end %>
 
