@@ -5,15 +5,6 @@
     <%= image_tag(@obra.picture_url, :width => "100%") if @obra.picture.present? %>
     
 
-    <h3>Commentários</h3>
-<% @obra.comments.each do |comment| %>
-  <div>
-    <strong><%= comment.user_name %></strong>
-    <br />
-    <p><%= comment.body %><p>
-  </div>
-<% end %>
-<%= render 'comments/form' %>
   </div>
 
   <div class="span3">
