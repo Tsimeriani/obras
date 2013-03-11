@@ -1,7 +1,6 @@
 Escultura::Application.routes.draw do
   root :to => redirect('/obras')
 
-  resources :comments
 
   resources :obras
 
