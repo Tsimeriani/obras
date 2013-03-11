@@ -21,9 +21,9 @@
     <p><b>Material: </b><%= @obra.material %></p>
     <p><b>Valor: </b><%= @obra.valor %></p>
     <p>
-      <%= link_to 'Editar', edit_obra_path(@idea) %> |
-      <%= link_to 'Apagar', @obra, confirm: 'Are you sure?', method: :delete %> |
-      <%= link_to 'Voltar', obras_path %>
+      <%= link_to 'Editar', edit_obra_path(@idea), :class =>"linkcolor"  %> |
+      <%= link_to 'Apagar', @obra, confirm: 'Are you sure?', method: :delete, :class =>"linkcolor" %> |
+      <%= link_to 'Voltar', obras_path, :class =>"linkcolor" %>
     </p>
   </div>
 </div>
